@@ -1,15 +1,15 @@
-using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] public float speed = 3f;
     [SerializeField] public float jumpForce = 6f;
     [SerializeField] public float jumpCooldown = 2.0f;
-    [SerializeField] public float dashSpeed = 10f;
+    [SerializeField] public float dashSpeed = 12f;
     [SerializeField] public float dashTime = 0.15f;
-    [SerializeField] public float dashCooldown = 5.0f;
+    [SerializeField] public float dashCooldown = 5f;
     Rigidbody rb;
     Vector3 move;
     bool jumpPressed;
@@ -27,6 +27,11 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         var k = Keyboard.current;
+        // Game Voer (Switching scene)
+        if (transform.position.y < -10f)
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
         // Making the player stay if not pressed anything
         if (k == null)
         {
