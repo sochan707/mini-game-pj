@@ -1,3 +1,4 @@
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -5,9 +6,15 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] public float speed = 3f;
     [SerializeField] public float jumpForce = 6f;
+    [SerializeField] public float jumpCooldown = 2.0f;
+    [SerializeField] public float dashSpeed = 10f;
+    [SerializeField] public float dashTime = 0.15f;
+    [SerializeField] public float dashCooldown = 5.0f;
     Rigidbody rb;
     Vector3 move;
     bool jumpPressed;
+    float dashEnd, nextDash;
+    Vector3 dashDirection;
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -26,6 +33,13 @@ public class PlayerMovement : MonoBehaviour
             move = Vector3.zero;
             return;
         }
+        // Getting Dash
+        if (k.leftShiftKey.wasPressedThisFrame && Time.time >= nextDash)
+        {
+            dashDirection = move != Vector3.zero ? move : transform.forward;
+            dashEnd = Time.time + dashTime;
+            nextDash = Time.time + dashCooldown;
+        }
         // Getting if the player jumpPressed
         if (k.spaceKey.wasPressedThisFrame)
         {
@@ -42,6 +56,14 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         Vector3 v = new Vector3(move.x * speed, rb.linearVelocity.y, move.z * speed);
+        if (Time.time < dashEnd)
+        {
+            v = new Vector3(dashDirection.x * dashSpeed, 0f, dashDirection.z * dashSpeed);
+        }
+        if (move != Vector3.zero)
+        {
+            transform.rotation = Quaternion.LookRotation(move);
+        }
         if (jumpPressed && Physics.Raycast(transform.position, Vector3.down, 0.6f))
         {
             v.y = jumpForce;
