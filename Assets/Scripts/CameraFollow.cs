@@ -1,9 +1,10 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CameraFollow : MonoBehaviour
 {
     public Transform target; 
-    public Vector3 offset = new Vector3(0f, 5f, -8f);
+    [SerializeField] public Vector3 offset = new Vector3(0f, 6f, -4f);
 
     void LateUpdate()
     {
