@@ -4,7 +4,7 @@ public class PlatformManager : MonoBehaviour
 {
     public int size = 5;
     public float spacing = 3f;
-    public Color[] colors = { Color.red, Color.blue, Color.yellow };
+    public Color[] colors = { Color.red, Color.blue, Color.yellow, Color.green};
     GameObject[] platforms;
     Color[] platformColors;
 
