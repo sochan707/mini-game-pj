@@ -29,7 +29,9 @@ public class MovingWall : MonoBehaviour
     {
         if (other.GetComponent<PlayerMovement>() != null)
         {
-            SceneManager.LoadScene("MainMenu");
+            EndGameController.PlayerWon = false;
+            SceneManager.LoadScene("EndGame");
+            return;
         }
     }
 }

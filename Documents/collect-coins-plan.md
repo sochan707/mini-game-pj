@@ -18,7 +18,7 @@ We will build this together in small checkpoints. I will explain the Unity conce
 
 - The live floor is the 8×8 grid created by `PlatformManager`. The older `Platform` object in the scene is disabled.
 - The chosen skull coin asset is in `Assets/Models/PolyKebap/Stylized Coin Pack/`. Our `CoinPickup` prefab adds the pickup collider.
-- `SampleScene` already contains a coin HUD and `CountdownTimer`. `EndGame` already contains separate win and lose panels, but it is not yet listed in Build Settings.
+- `SampleScene` contains a coin HUD and `CountdownTimer`. `EndGame` has separate win and lose panels and is enabled in the scene list.
 - Coin collection is valid only while time remains. At the fifth coin, stop spawning and show the win result. A new random spawn should avoid the prior position when another active tile is available. The current code excludes the prior tile object within a round; after `PlatformManager` rebuilds the grid, it can choose the same position again.
 
 ## Working agreement
@@ -31,5 +31,7 @@ You write the game changes. I guide one checkpoint at a time, explain the releva
 - `PlatformManager.GetActivePlatforms()` returns tiles that are currently active.
 - `Assets/Scripts/Coin/CoinSpawner.cs` is attached to `GameManager` in `SampleScene`, with its platform manager and coin prefab references assigned. It spawns one coin on a random active tile. The player can collect it, and the pickup notifies the spawner to create the next coin on an active tile. This was playtested.
 - The coin intentionally stays in place if its tile becomes inactive or is replaced. The relocation code was removed at the student's request.
-- The existing coin HUD displays the count beside the coin icon, and `CoinSpawner` stops spawning after five pickups. The direction arrow was removed from the plan at the student's request.
-- **Next lesson:** Connect the fifth pickup and timer to the win and lose results, one small step at a time. Keep the round-reset position limitation in mind if a strict different-position rule becomes important.
+- The existing coin HUD displays the count beside the coin icon. `CoinSpawner` loads `EndGame` with `PlayerWon = true` on the fifth pickup. `EndGameController` selects the matching win or lose panel. The fifth-pickup win transition still needs a playtest.
+- `PlayerMovement` loads `EndGame` with `PlayerWon = false` when the player falls below Y = -10. The falling lose result was playtested successfully.
+- The direction arrow was removed from the plan at the student's request. Timer expiry, moving-wall contact, and time-valid pickup rules are not connected to the result flow yet. Pause behavior also remains to be checked.
+- **Next lesson:** Playtest the fifth-pickup win transition, then connect timer expiry to the lose result, one small step at a time. Keep the round-reset position limitation in mind if a strict different-position rule becomes important.
