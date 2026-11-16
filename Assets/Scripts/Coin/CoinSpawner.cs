@@ -7,12 +7,15 @@ public class CoinSpawner : MonoBehaviour
     [SerializeField] private PlatformManager platformManager;
     [SerializeField] private CoinPickup coinPrefab;
     [SerializeField] private float heightAboveTile = 1f;
+    [SerializeField] private TMPro.TMP_Text coinCountText;
 
     private CoinPickup currentCoin;
+    private int collectedCount;
     private GameObject currentTile;
 
     private IEnumerator Start()
     {
+        coinCountText.text = $"{collectedCount}/5";
         yield return null;
         SpawnCoin();
     }
@@ -48,7 +51,11 @@ public class CoinSpawner : MonoBehaviour
         if (coin != currentCoin)
             return;
 
+        collectedCount++;
+        coinCountText.text = $"{collectedCount}/5";
         currentCoin = null;
-        SpawnCoin();
+
+        if (collectedCount < 5)
+            SpawnCoin();
     }
 }

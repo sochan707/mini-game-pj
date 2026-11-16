@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class MovingWall : MonoBehaviour
 {
     [SerializeField] private float speed = 3f;
-    [SerializeField] private float despawnX = 15f;
+    [SerializeField] private float despawnX = 20f;
 
     private Rigidbody rb;
 

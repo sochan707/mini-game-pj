@@ -264,6 +264,7 @@ MonoBehaviour:
   platformManager: {fileID: 33262100}
   coinPrefab: {fileID: 2667907169819786977, guid: 7cddcf6781b844f51aee697433c897d6, type: 3}
   heightAboveTile: 1
+  coinCountText: {fileID: 2003305945}
 --- !u!1001 &71297503
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4198,7 +4199,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -29.8, y: -5.5}
+  m_AnchoredPosition: {x: -29, y: -1}
   m_SizeDelta: {x: 18, y: 18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1072523959
@@ -5037,6 +5038,22 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 718722290}
+    - target: {fileID: 556004217743059904, guid: 75e0458e163444d5a8d4cf7ddc8087a8, type: 3}
+      propertyPath: laneZ.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 556004217743059904, guid: 75e0458e163444d5a8d4cf7ddc8087a8, type: 3}
+      propertyPath: 'laneZ.Array.data[5]'
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 556004217743059904, guid: 75e0458e163444d5a8d4cf7ddc8087a8, type: 3}
+      propertyPath: 'laneZ.Array.data[6]'
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 556004217743059904, guid: 75e0458e163444d5a8d4cf7ddc8087a8, type: 3}
+      propertyPath: 'laneZ.Array.data[7]'
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 3326623144236012617, guid: 75e0458e163444d5a8d4cf7ddc8087a8, type: 3}
       propertyPath: m_Name
       value: WallSpawner
@@ -6441,7 +6458,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 56.4, y: -31.3}
+  m_AnchoredPosition: {x: 67, y: -36}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2003305945
@@ -6464,9 +6481,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Coins
-
-'
+  m_text: 0/5
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6493,8 +6508,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 8
-  m_fontSizeBase: 8
+  m_fontSize: 18
+  m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
