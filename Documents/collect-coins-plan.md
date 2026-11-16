@@ -17,10 +17,17 @@ We will build this together in small checkpoints. I will explain the Unity conce
 ## Implementation notes
 
 - The live floor is the 8×8 grid created by `PlatformManager`. The older `Platform` object in the scene is disabled.
-- The gold coin asset is currently in `Assets/Models/PolyKebap/Stylized Coin Pack/`. Its model has no pickup collider, so our game prefab needs one.
+- The chosen skull coin asset is in `Assets/Models/PolyKebap/Stylized Coin Pack/`. Our `CoinPickup` prefab adds the pickup collider.
 - `SampleScene` already contains a coin HUD and `CountdownTimer`. `EndGame` already contains separate win and lose panels, but it is not yet listed in Build Settings.
 - Coin collection is valid only while time remains. At the fifth coin, stop spawning and show the win result. A new random spawn should avoid the prior tile when another active tile is available.
 
 ## Working agreement
 
 You write the game changes. I guide one checkpoint at a time, explain the relevant Unity ideas and code, review your work, and help debug unexpected behavior before we continue.
+
+## Progress for the next chat
+
+- `Assets/Prefabs/CoinPickup.prefab` uses `Coin_Skull`, a trigger collider, `CoinMovement`, and `CoinPickup`.
+- `PlatformManager.GetActivePlatforms()` returns tiles that are currently active.
+- `Assets/Scripts/Coin/CoinSpawner.cs` is attached to `GameManager` in `SampleScene`, with its platform manager and coin prefab references assigned. It spawns one coin on a random active tile. The player can collect it.
+- **Next lesson:** Have the pickup notify the spawner so a new coin appears after collection, preferably on a different active tile. Give a short explanation and let the student write the code. The current `CoinPickup` destroys itself without notifying the spawner.

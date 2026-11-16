@@ -192,6 +192,7 @@ GameObject:
   - component: {fileID: 33262101}
   - component: {fileID: 33262100}
   - component: {fileID: 33262102}
+  - component: {fileID: 33262103}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -248,6 +249,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseMenu
   pausePanel: {fileID: 323594656}
+--- !u!114 &33262103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33262099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed51119faa4a34e3eb64cc6418a4f88a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CoinSpawner
+  platformManager: {fileID: 33262100}
+  coinPrefab: {fileID: 2667907169819786977, guid: 7cddcf6781b844f51aee697433c897d6, type: 3}
+  heightAboveTile: 1
 --- !u!1001 &71297503
 PrefabInstance:
   m_ObjectHideFlags: 0
