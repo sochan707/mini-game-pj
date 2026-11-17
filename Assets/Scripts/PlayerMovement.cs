@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     {
         var k = Keyboard.current;
         // Game Voer (Switching scene)
-        if (transform.position.y < -10f)
+        if (transform.position.y < -1f)
         {
             EndGameController.PlayerWon = false;
             SceneManager.LoadScene("EndGame");
