@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class CountdownTimer : MonoBehaviour
 {
-    public float durationSeconds = 180f;
+    public float durationSeconds = 120f;
 
     TMP_Text timerText;
     float timeRemaining;
