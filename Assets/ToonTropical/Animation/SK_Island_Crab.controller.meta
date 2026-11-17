@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: eaa43dcfcb727644aa514b1741006213
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 421052
+  packageName: 'Toon Tropical Lite: Free Stylized Island Starter'
+  packageVersion: 1.0.0
+  assetPath: Assets/ToonTropical/Animation/SK_Island_Crab.controller
+  uploadId: 1030212
