@@ -120,4 +120,4 @@ Open the project with Unity `6000.3.8f1`. Another version will upgrade the proje
 
 ## Playable build
 
-* [Download the macOS build (ZIP)](https://drive.google.com/file/d/1GMHj6ar7lzf5PAOOGyCE8iYNU3_9hmyl/view?usp=drivesdk)
+* [Download the macOS build (ZIP)](https://drive.google.com/file/d/1GMHj6ar7lzf5PAOOGyCE8iYNU3_9hmyl/view?usp=sharing)
