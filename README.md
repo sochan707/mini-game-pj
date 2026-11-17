@@ -1,6 +1,6 @@
-# TODO: Game Title
+# TODO: Falling Tile
 
-A 3D mini-game made in Unity for the Game Development course (CS-CADT, Year 3, Term 1). You play as Blob, a small bean with floating hands and feet, and you have to collect coins before time runs out without falling off the platforms.
+A 3D mini-game made in Unity for the Game Development course (CS-CADT, Year 3, Term 1). You play as Blob, and you have to collect coins before time runs out without falling off the platforms.
 
 ![1794833025677](image/README/1794833025677.png)
 
@@ -85,7 +85,7 @@ Open the project with Unity `6000.3.8f1`. Another version will upgrade the proje
 
 | Member                                           | GitHub               | Contributions                                                                                                                                                 |
 | ------------------------------------------------ | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Game UI, Main programmer                         | Sarin Meas Sochan    | Project setup, repository owner, pull request reviews and merges. Main menu and Start page, moving walls and wall spawner, coin collection, green tile, etc. |
+| Game UI, Main programmer                         | Sarin Meas Sochan    | Project setup, repository owner, pull request reviews and merges. Main menu and Start page, moving walls and wall spawner, coin collection, etc. |
 | Game UI, gameplay maker, assets                  | Kaing Menglay        | Sample scene and prefabs, URP settings, gameplay HUD (timer, coins, pause), mission UI, map                                                                   |
 | Game UI, Game screen interactions, Game Desginer | Phea Sreynith        | Color materials, End Game screen (win and lose panels)                                                                                                        |
 | Player movemeent                                 | Chhon Chhaychanvibol | Player movement (walk, jump, dash, facing), camera follow, color platform rounds, Blob 3D model                                                               |
