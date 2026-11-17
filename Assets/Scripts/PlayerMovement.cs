@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] public float dashTime = 0.15f;
     [SerializeField] public float dashCooldown = 5f;
     Rigidbody rb;
+    Collider playerCollider;
     Vector3 move;
     bool jumpPressed;
     float dashEnd, nextDash;
@@ -18,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        playerCollider = GetComponent<Collider>();
     }
     void Start()
     {
@@ -71,7 +73,8 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.rotation = Quaternion.LookRotation(move);
         }
-        if (jumpPressed && Physics.Raycast(transform.position, Vector3.down, 0.6f))
+        float groundCheckDistance = transform.position.y - playerCollider.bounds.min.y + 0.1f;
+        if (jumpPressed && Physics.Raycast(transform.position, Vector3.down, groundCheckDistance))
         {
             v.y = jumpForce;
         }
