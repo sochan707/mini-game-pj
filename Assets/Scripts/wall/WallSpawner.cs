@@ -4,7 +4,7 @@ public class WallSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject wallPrefab;
     [SerializeField] private Transform player;
-    [SerializeField] private float spawnInterval = 4f;
+    [SerializeField] private float spawnInterval = 2f;
     [SerializeField] private int maxActiveWalls = 3;
     [SerializeField] private float spawnX = -2f;
     [SerializeField] private float spawnY = 1f;
