@@ -114,4 +114,5 @@ InitTestScene*.unity*
 /[Aa]ssets/[Ss]ceneDependencyCache*
 
 # Local documents
-/Documents/
+/Documents/*
+!/Documents/collect-coins-plan.md

@@ -30,7 +30,9 @@ public class PlayerMovement : MonoBehaviour
         // Game Voer (Switching scene)
         if (transform.position.y < -10f)
         {
-            SceneManager.LoadScene("MainMenu");
+            EndGameController.PlayerWon = false;
+            SceneManager.LoadScene("EndGame");
+            return;
         }
         // Making the player stay if not pressed anything
         if (k == null)

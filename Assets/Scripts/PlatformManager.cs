@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class PlatformManager : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class PlatformManager : MonoBehaviour
     public Color[] colors = { Color.red, Color.blue, Color.yellow, Color.green};
     GameObject[] platforms;
     Color[] platformColors;
+    
 
     // Game UI
     public TMPro.TMP_Text label;
@@ -42,6 +44,22 @@ public class PlatformManager : MonoBehaviour
         label.color = safe;
         endTime = Time.time + roundTime;
         Invoke(nameof(EndRound), roundTime);
+    }
+
+    public List<GameObject> GetActivePlatforms()
+    {
+        List<GameObject> active = new List<GameObject>();
+
+        if (platforms == null)
+            return active;
+
+        foreach (GameObject platform in platforms)
+        {
+            if (platform != null && platform.activeInHierarchy)
+                active.Add(platform);
+        }
+
+        return active;
     }
 
     void EndRound()
