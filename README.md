@@ -85,10 +85,10 @@ Open the project with Unity `6000.3.8f1`. Another version will upgrade the proje
 
 | Member | Role | Contributions |
 | --- | --- | --- |
-| Sarin Meas Sochan | UI and main programmer | Project setup, repository management, pull request reviews and merges; main menu and start page; moving walls and wall spawner; coin collection. |
-| Kaing Menglay | UI, gameplay, and assets | Sample scene and prefabs; URP settings; gameplay HUD (timer, coins, pause); mission UI and map. |
-| Phea Sreynith | UI and game designer | Color materials; end game screen with win and lose panels. |
-| Chhon Chhaychanvibol | Player movement | Walking, jumping, dashing, and facing; camera follow; color platform rounds; Blob 3D model. |
+| Sarin Meas Sochan | UI and main programmer | Project setup, repository management, pull request reviews and merges, main menu and start page, moving walls and wall spawner, coin collection. |
+| Kaing Menglay | UI, gameplay, and assets | Sample scene and prefabs, URP settings, gameplay HUD (timer, coins, pause), mission UI and map. |
+| Phea Sreynith | UI and game designer | Color materials, end game screen with win and lose panels. |
+| Chhon Chhaychanvibol | Player movement | Walking, jumping, dashing, and facing, camera follow, color platform rounds, Blob 3D model. |
 
 ## Assets and tutorial references
 
