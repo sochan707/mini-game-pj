@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WallSpawner
   wallPrefab: {fileID: 7896460529327199298, guid: f1ed38e965f684d29801056520c3a22f, type: 3}
-  spawnInterval: 4
+  spawnInterval: 2
   maxActiveWalls: 5
   spawnX: -2
   spawnY: 0.625
