@@ -9,6 +9,7 @@ public class CoinSpawner : MonoBehaviour
     [SerializeField] private CoinPickup coinPrefab;
     [SerializeField] private float heightAboveTile = 1f;
     [SerializeField] private TMPro.TMP_Text coinCountText;
+    [SerializeField] private AudioClip coinSound;
 
     private CoinPickup currentCoin;
     private int collectedCount;

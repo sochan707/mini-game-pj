@@ -36,6 +36,21 @@ public class GameMusic : MonoBehaviour
         }
     }
 
+    public static void StopMusic()
+    {
+        if (instance == null)
+            return;
+
+        GameMusic music = instance;
+        instance = null;
+
+        AudioSource source = music.GetComponent<AudioSource>();
+        if (source != null)
+            source.Stop();
+
+        Destroy(music.gameObject);
+    }
+
     private void OnDestroy()
     {
         if (instance == this)

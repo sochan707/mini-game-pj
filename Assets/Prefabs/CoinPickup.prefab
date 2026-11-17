@@ -84,6 +84,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fc0d8124f1ea40f8a04877f601e23b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CoinPickup
+  collectSound: {fileID: 8300000, guid: 4aa3dff23cf38ef41bec0ccede689742, type: 3}
 --- !u!1001 &4372919450074022158
 PrefabInstance:
   m_ObjectHideFlags: 0

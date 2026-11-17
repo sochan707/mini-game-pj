@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class CoinPickup : MonoBehaviour
 {
+    [SerializeField] private AudioClip collectSound;
+
     private bool collected;
     private CoinSpawner coinSpawner;
 
@@ -23,9 +25,27 @@ public class CoinPickup : MonoBehaviour
             return;
 
         collected = true;
+        PlayCollectSound();
         coinSpawner.OnCoinCollected(this);
         Debug.Log("Coin collected!");
         Destroy(gameObject);
+    }
+
+    private void PlayCollectSound()
+    {
+        if (collectSound == null)
+            return;
+
+        GameObject soundObject = new GameObject("Coin Collect Sound");
+        soundObject.transform.position = transform.position;
+
+        AudioSource audioSource = soundObject.AddComponent<AudioSource>();
+        audioSource.clip = collectSound;
+        audioSource.spatialBlend = 0f;
+
+        DontDestroyOnLoad(soundObject);
+        audioSource.Play();
+        Destroy(soundObject, collectSound.length);
     }
 
     public void SetSpawner(CoinSpawner spawner)
