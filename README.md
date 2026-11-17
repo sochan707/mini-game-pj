@@ -63,9 +63,9 @@ Open the project with Unity `6000.3.8f1`. Another version will upgrade the proje
 
 ### Play the build
 
-1. Download the build from the [playable build](#playable-build) link.
+1. Download the macOS build from the [playable build](#playable-build) link.
 2. Unzip it.
-3. Run the game executable.
+3. Open `mini-game-Mac.app`.
 
 ### Make a build yourself
 
@@ -120,4 +120,4 @@ Open the project with Unity `6000.3.8f1`. Another version will upgrade the proje
 
 ## Playable build
 
-* Link:
+* [Download the macOS build (ZIP)](https://drive.google.com/file/d/1GMHj6ar7lzf5PAOOGyCE8iYNU3_9hmyl/view?usp=drivesdk)
