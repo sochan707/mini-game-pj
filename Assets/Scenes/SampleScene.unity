@@ -274,6 +274,11 @@ MonoBehaviour:
   - {r: 0, g: 0, b: 1, a: 1}
   - {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   - {r: 0, g: 1, b: 0, a: 1}
+  platformMaterials:
+  - {fileID: 2100000, guid: 9e32650bc9c7caf4ebd922afa047cbd7, type: 2}
+  - {fileID: 2100000, guid: 813d894d51246c84391ad15e316f9350, type: 2}
+  - {fileID: 2100000, guid: 62492b9f94903c94a93852f0ba38fcc6, type: 2}
+  - {fileID: 2100000, guid: 5484aa8d332c15941b51b2a548a0e58e, type: 2}
   label: {fileID: 1150313864}
   roundTime: 5
 --- !u!4 &33262101

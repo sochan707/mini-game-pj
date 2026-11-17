@@ -6,6 +6,7 @@ public class PlatformManager : MonoBehaviour
     public int size = 5;
     public float spacing = 3f;
     public Color[] colors = { Color.red, Color.blue, Color.yellow, Color.green};
+    [SerializeField] Material[] platformMaterials;
     GameObject[] platforms;
     Color[] platformColors;
     
@@ -35,8 +36,9 @@ public class PlatformManager : MonoBehaviour
             var p = GameObject.CreatePrimitive(PrimitiveType.Cube);
             p.transform.localScale = new Vector3(2.5f, 0.5f, 2.5f);
             p.transform.position = new Vector3(i % size * spacing, 0f, i / size * spacing);
-            platformColors[i] = colors[Random.Range(0, colors.Length)];
-            p.GetComponent<Renderer>().material.color = platformColors[i];
+            int colorIndex = Random.Range(0, colors.Length);
+            platformColors[i] = colors[colorIndex];
+            p.GetComponent<Renderer>().sharedMaterial = platformMaterials[colorIndex];
             platforms[i] = p;
         }
 
