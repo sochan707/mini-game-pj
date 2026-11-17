@@ -13,6 +13,7 @@ public class EndGameController : MonoBehaviour
         winPanel.SetActive(PlayerWon);
         losePanel.SetActive(!PlayerWon);
     }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
