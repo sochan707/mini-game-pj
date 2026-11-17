@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CountdownTimer : MonoBehaviour
 {
@@ -21,6 +22,12 @@ public class CountdownTimer : MonoBehaviour
 
         timeRemaining = Mathf.Max(0f, timeRemaining - Time.deltaTime);
         UpdateDisplay();
+
+        if (timeRemaining <= 0f)
+        {
+            EndGameController.PlayerWon = false;
+            SceneManager.LoadScene("EndGame");
+        }
     }
 
     void UpdateDisplay()
