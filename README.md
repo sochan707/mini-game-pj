@@ -1,4 +1,4 @@
-# TODO: Falling Tile
+# Falling Tile
 
 A 3D mini-game made in Unity for the Game Development course (CS-CADT, Year 3, Term 1). You play as Blob, and you have to collect coins before time runs out without falling off the platforms.
 
