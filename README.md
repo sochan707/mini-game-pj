@@ -83,17 +83,27 @@ Open the project with Unity `6000.3.8f1`. Another version will upgrade the proje
 
 ## Team members and contributions
 
-| Member                                           | GitHub               | Contributions                                                                                                                                                 |
-| ------------------------------------------------ | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Game UI, Main programmer                         | Sarin Meas Sochan    | Project setup, repository owner, pull request reviews and merges. Main menu and Start page, moving walls and wall spawner, coin collection, etc. |
-| Game UI, gameplay maker, assets                  | Kaing Menglay        | Sample scene and prefabs, URP settings, gameplay HUD (timer, coins, pause), mission UI, map                                                                   |
-| Game UI, Game screen interactions, Game Desginer | Phea Sreynith        | Color materials, End Game screen (win and lose panels)                                                                                                        |
-| Player movemeent                                 | Chhon Chhaychanvibol | Player movement (walk, jump, dash, facing), camera follow, color platform rounds, Blob 3D model                                                               |
-
+| Member | Role | Contributions |
+| --- | --- | --- |
+| Sarin Meas Sochan | UI and main programmer | Project setup, repository management, pull request reviews and merges; main menu and start page; moving walls and wall spawner; coin collection. |
+| Kaing Menglay | UI, gameplay, and assets | Sample scene and prefabs; URP settings; gameplay HUD (timer, coins, pause); mission UI and map. |
+| Phea Sreynith | UI and game designer | Color materials; end game screen with win and lose panels. |
+| Chhon Chhaychanvibol | Player movement | Walking, jumping, dashing, and facing; camera follow; color platform rounds; Blob 3D model. |
 
 ## Assets and tutorial references
 
-* [assetstore.unity.com/packages/3d/environments/landscapes/toon-tropical-lite-free-stylized-island-starter-421052](https://assetstore.unity.com/packages/3d/environments/landscapes/toon-tropical-lite-free-stylized-island-starter-421052)
+### Art and audio
+
+| Asset | Use | Credit |
+| --- | --- | --- |
+| [Toon Tropical Lite: Free Stylized Island Starter](https://assetstore.unity.com/packages/3d/environments/landscapes/toon-tropical-lite-free-stylized-island-starter-421052) | Island environment assets | Halfwatt Games, Unity Asset Store |
+| [Stylized Coin Pack](https://assetstore.unity.com/packages/3d/props/stylized-coin-pack-15-coins-gold-silver-bronze-wood-340494) | 3D coin models | PolyKebap, Unity Asset Store |
+| [`idoberg-tropical-house-melody-loop-v2-265392.mp3`](https://pixabay.com/es/sound-effects/musical-tropical-house-melody-loop-v2-265392/) | Background music | IdoBerg, Pixabay |
+| `Coin.mp3`, `Win.mp3`, `lostSound.mp3` | Sound effects | Downloaded from [Pixabay](https://pixabay.com/); individual item links were not recorded |
+| `winLost_bg.jpg`, `sky backgroud.jpeg`, `sky2.jpg`, `4161612.jpg` | Background images | Downloaded from [Pixabay](https://pixabay.com/); individual item links were not recorded |
+| `blue-sky-and-cloud-abstract-nature-landscape-cartoon-background-decoration-vector.jpg` | Background image | Original source not confirmed |
+| `clock.png`, `Coins.png`, `Pause.png` | HUD icons | Original source not confirmed |
+| Blob player model | Player character | Made by the team in Blender |
 
 ### Unity packages
 
@@ -101,18 +111,13 @@ Open the project with Unity `6000.3.8f1`. Another version will upgrade the proje
 - [Input System](https://docs.unity3d.com/Packages/com.unity.inputsystem@1.18/manual/index.html)
 - [TextMesh Pro](https://docs.unity3d.com/Packages/com.unity.ugui@2.0/manual/TextMeshPro/index.html)
 
-### Art
-
-| File                                                                                                                                                            | Use                 | Source                                                                                                                                                                                                                                    |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Assets/Texture/winLost_bg.jpg`                                                                                                                               | End Game background | DIY                                                                                                                                                                                                                                       |
-| `Assets/Texture/sky backgroud.jpeg`, `sky2.jpg`, `4161612.jpg`, `blue-sky-and-cloud-abstract-nature-landscape-cartoon-background-decoration-vector.jpg` | Backgrounds         | [assetstore.unity.com/packages/3d/environments/landscapes/toon-tropical-lite-free-stylized-island-starter-421052](https://assetstore.unity.com/packages/3d/environments/landscapes/toon-tropical-lite-free-stylized-island-starter-421052) |
-| `Assets/Texture/clock.png`, `Coins.png`, `Pause.png`                                                                                                      | HUD icons           | DIY and other assets                                                                                                                                                                                                                      |
-| Blob character                                                                                                                                                  | Player model        | Blender, hand-drawn, and model                                                                                                                                                                                                            |
-
 ### Tutorials
 
 - none
+
+### AI assistance
+
+- OpenAI Codex assisted with debugging the URP platform materials, verifying the macOS build, and editing the submission README.
 
 ## Gameplay video
 
