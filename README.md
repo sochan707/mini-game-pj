@@ -116,7 +116,7 @@ Open the project with Unity `6000.3.8f1`. Another version will upgrade the proje
 
 ## Gameplay video
 
-* Link:
+* [Watch the gameplay demo (MP4)](https://drive.google.com/file/d/1H5G6QEVo2FXxZX5zylUwr4MrscoKr2Pt/view?usp=drivesdk)
 
 ## Playable build
 
